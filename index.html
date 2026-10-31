@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="Perfil profissional de Andreia Lima Viana — Auxiliar Administrativo, com cursos em Informática Básica e Marketing Digital com Inteligência Artificial.">
+  <title>Andreia Lima Viana | Perfil Profissional</title>
+  <style>
+    :root {
+      --red: #e52b2b;
+      --blue: #243de8;
+      --yellow: #f3d62b;
+      --ink: #202020;
+      --muted: #666;
+      --paper: #f7f7f2;
+      --white: #fff;
+      --line: #222;
+      --space: clamp(1.25rem, 3vw, 2.5rem);
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink);
+      font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+    .wrap { width: min(var(--max), calc(100% - 3rem)); margin-inline: auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 100; background: rgba(247,247,242,.96);
+      border-bottom: 2px solid var(--line); backdrop-filter: blur(8px);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; font-weight: 800; letter-spacing: -.03em; }
+    .brand-mark { display: grid; grid-template-columns: 14px 14px; grid-template-rows: 14px 14px; gap: 3px; transform: rotate(-3deg); }
+    .brand-mark span:nth-child(1) { background: var(--red); }
+    .brand-mark span:nth-child(2) { background: var(--blue); }
+    .brand-mark span:nth-child(3) { background: var(--yellow); }
+    .brand-mark span:nth-child(4) { background: var(--ink); }
+    .nav-links { display: flex; align-items: center; gap: clamp(.75rem, 2vw, 1.6rem); }
+    .nav-links a { font-size: .88rem; text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; padding: .4rem 0; }
+    .nav-links a:hover, .nav-links a.active { border-color: var(--red); }
+    .menu-toggle { display: none; border: 2px solid var(--ink); background: transparent; padding: .55rem .7rem; font-weight: 700; cursor: pointer; }
+    .hero { padding: clamp(3.5rem, 8vw, 7rem) 0 clamp(4rem, 7vw, 6.5rem); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: clamp(2rem, 7vw, 6rem); }
+    .eyebrow { display: inline-flex; align-items: center; gap: .65rem; text-transform: uppercase; letter-spacing: .14em; font-size: .76rem; font-weight: 800; margin: 0 0 1.25rem; }
+    .eyebrow::before { content: ""; display: inline-block; width: 30px; height: 5px; background: var(--red); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 720px; margin-bottom: 1.25rem; font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: .98; letter-spacing: -.065em; font-weight: 800; }
+    h1 .name-highlight { display: block; color: var(--blue); }
+    .hero-copy { max-width: 590px; color: #484848; font-size: clamp(1.05rem, 1.8vw, 1.22rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: .6rem; min-height: 48px; padding: .8rem 1.1rem; border: 2px solid var(--ink); border-radius: 6px; font: inherit; font-size: .92rem; font-weight: 700; text-decoration: none; cursor: pointer; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 3px 0 rgba(0,0,0,.13); }
+    .btn-primary { background: var(--yellow); color: var(--ink); }
+    .btn-secondary { background: transparent; }
+    .artboard { min-height: 380px; position: relative; display: grid; place-items: center; }
+    .art-frame { width: min(100%, 410px); aspect-ratio: 1 / 1; position: relative; border: 3px solid var(--ink); background: var(--white); }
+    .block-red { position: absolute; background: var(--red); width: 42%; height: 42%; top: 0; left: 0; border-right: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
+    .block-blue { position: absolute; background: var(--blue); width: 34%; height: 34%; right: 0; bottom: 0; border-left: 3px solid var(--ink); border-top: 3px solid var(--ink); }
+    .block-yellow { position: absolute; background: var(--yellow); width: 22%; height: 22%; right: 13%; top: 13%; border: 3px solid var(--ink); }
+    .art-text { position: absolute; left: 12%; bottom: 14%; max-width: 62%; font-weight: 800; font-size: clamp(1.4rem, 3vw, 2.3rem); line-height: 1.05; letter-spacing: -.05em; }
+    .art-label { position: absolute; right: -18px; top: 28%; writing-mode: vertical-rl; transform: rotate(180deg); background: var(--ink); color: var(--white); padding: .75rem .5rem; font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .section { padding: clamp(4rem, 8vw, 7rem) 0; border-top: 2px solid var(--line); }
+    .section-heading { display: grid; grid-template-columns: .7fr 1.3fr; gap: 2rem; align-items: start; margin-bottom: 2.5rem; }
+    .section-kicker { margin: .25rem 0 0; color: var(--red); text-transform: uppercase; letter-spacing: .13em; font-size: .78rem; font-weight: 800; }
+    h2 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.03; letter-spacing: -.055em; margin-bottom: .75rem; }
+    .section-intro { color: var(--muted); max-width: 650px; margin-bottom: 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .panel { padding: clamp(1.4rem, 3vw, 2rem); background: var(--white); border: 2px solid var(--line); }
+    .panel h3 { font-size: 1.15rem; margin-bottom: .8rem; letter-spacing: -.02em; }
+    .panel p:last-child { margin-bottom: 0; }
+    .fact-list { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+    .fact-list li { padding: .85rem; border: 1px solid #c8c8c0; background: #fbfbf7; }
+    .fact-list strong { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: .2rem; }
+    .skills-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 2rem; }
+    .skills-note { background: var(--blue); color: white; padding: clamp(1.5rem, 4vw, 2.6rem); border: 2px solid var(--ink); }
+    .skills-note h3 { font-size: 1.65rem; line-height: 1.1; letter-spacing: -.04em; }
+    .skills-note p { color: #f0f0ff; }
+    .skill-list { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; align-content: start; }
+    .skill { display: flex; gap: .7rem; align-items: flex-start; padding: 1rem; border: 2px solid var(--ink); background: var(--white); font-weight: 700; }
+    .skill-mark { flex: 0 0 12px; width: 12px; height: 12px; margin-top: .35rem; background: var(--red); }
+    .skill:nth-child(2n) .skill-mark { background: var(--yellow); }
+    .timeline { display: grid; grid-template-columns: 70px 1fr; max-width: 850px; }
+    .timeline-mark { border-right: 3px solid var(--ink); position: relative; }
+    .timeline-mark::before { content: ""; position: absolute; top: 1.7rem; right: -9px; width: 15px; height: 15px; background: var(--yellow); border: 2px solid var(--ink); }
+    .timeline-card { margin: 0 0 1.2rem 1.5rem; padding: 1.5rem; border: 2px solid var(--ink); background: var(--white); }
+    .timeline-card .meta { color: var(--blue); font-weight: 800; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; }
+    .timeline-card h3 { font-size: 1.35rem; margin: .45rem 0; }
+    .timeline-card p { color: var(--muted); margin-bottom: 0; }
+    .course-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 1.25rem; }
+    .course-card { min-height: 210px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.6rem; border: 2px solid var(--ink); background: var(--white); }
+    .course-card.featured { background: var(--yellow); }
+    .course-number { font-family: "Courier New", monospace; font-size: .78rem; font-weight: 700; }
+    .course-card h3 { max-width: 390px; font-size: clamp(1.35rem, 2.6vw, 2rem); line-height: 1.1; letter-spacing: -.04em; margin: 2rem 0 .5rem; }
+    .course-card p { margin-bottom: 0; color: #555; }
+    .projects-empty { display: grid; grid-template-columns: 100px 1fr; gap: 1.5rem; padding: 1.75rem; border: 2px dashed #777; align-items: center; }
+    .empty-icon { width: 82px; height: 82px; display: grid; place-items: center; background: var(--red); border: 2px solid var(--ink); font-size: 2rem; font-weight: 800; }
+    .projects-empty h3 { margin-bottom: .45rem; }
+    .projects-empty p { color: var(--muted); margin-bottom: 0; }
+    .contact { background: var(--ink); color: var(--white); }
+    .contact .section-kicker { color: var(--yellow); }
+    .contact .section-intro { color: #d2d2d2; }
+    .contact-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 2rem; align-items: start; }
+    .contact-box { border: 2px solid #eee; padding: 1.5rem; }
+    .contact-box p { color: #ddd; }
+    .contact-box .btn { border-color: var(--yellow); background: var(--yellow); color: var(--ink); }
+    .contact-details { display: grid; gap: .8rem; }
+    .contact-item { padding: .9rem 0; border-bottom: 1px solid #555; }
+    .contact-item span { display: block; font-size: .74rem; color: #bcbcbc; letter-spacing: .12em; text-transform: uppercase; }
+    .contact-item strong { font-weight: 600; }
+    footer { padding: 1.5rem 0; background: var(--ink); color: #bbb; border-top: 1px solid #555; font-size: .82rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .back-top { color: var(--yellow); text-decoration: none; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity 420ms ease-out, transform 420ms ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .toast { position: fixed; bottom: 1rem; left: 50%; transform: translate(-50%, 20px); opacity: 0; z-index: 500; padding: .85rem 1.1rem; background: var(--yellow); color: var(--ink); border: 2px solid var(--ink); font-weight: 700; transition: opacity .2s, transform .2s; pointer-events: none; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 767px) {
+      .wrap { width: min(100% - 2rem, var(--max)); }
+      .nav { min-height: 68px; flex-wrap: wrap; padding: .7rem 0; }
+      .menu-toggle { display: inline-block; }
+      .nav-links { display: none; width: 100%; padding: .5rem 0 .7rem; flex-direction: column; align-items: stretch; gap: .25rem; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: .65rem .2rem; border-bottom: 1px solid #ddd; }
+      .hero-grid, .section-heading, .about-grid, .skills-layout, .course-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 3rem; }
+      .artboard { min-height: 300px; }
+      .art-frame { width: min(84%, 340px); }
+      .art-label { right: 0; }
+      .section-heading { gap: .75rem; }
+      .fact-list, .skill-list { grid-template-columns: 1fr; }
+      .projects-empty { grid-template-columns: 1fr; }
+      .empty-icon { width: 64px; height: 64px; }
+      .timeline { grid-template-columns: 28px 1fr; }
+      .timeline-card { margin-left: 1rem; padding: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="Andreia Lima Viana, início">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span>Andreia Lima Viana</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a><a href="#competencias">Competências</a><a href="#experiencia">Experiência</a><a href="#formacao">Cursos</a><a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <p class="eyebrow">Perfil profissional</p>
+          <h1>Olá, sou <span class="name-highlight">Andreia Lima Viana.</span></h1>
+          <p class="hero-copy">Auxiliar Administrativa com interesse em tecnologia, Marketing Digital e Inteligência Artificial. Sempre aprendendo e desenvolvendo novas habilidades.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#sobre">Conheça meu perfil <span aria-hidden="true">↘</span></a>
+            <a class="btn btn-secondary" href="#contato">Informações de contato</a>
+          </div>
+        </div>
+        <div class="artboard reveal" aria-label="Composição geométrica abstrata inspirada no estilo De Stijl">
+          <div class="art-frame">
+            <div class="block-red"></div><div class="block-blue"></div><div class="block-yellow"></div>
+            <div class="art-text">Organização.<br>Aprendizado.<br>Compromisso.</div>
+          </div>
+          <div class="art-label">Santo André · SP</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="section-kicker">01 / Sobre mim</p>
+          <div><h2>Experiência prática.<br>Vontade de evoluir.</h2><p class="section-intro">Sou uma profissional dedicada, responsável e comprometida com minhas atividades. Busco aprimorar meus conhecimentos e acompanhar novas ferramentas que possam contribuir para meu desenvolvimento.</p></div>
+        </div>
+        <div class="about-grid">
+          <article class="panel reveal">
+            <h3>Minha trajetória</h3>
+            <p>Atuo como Auxiliar Administrativo na empresa 9.Gplastic, contribuindo para a organização e o andamento das atividades administrativas.</p>
+            <p>Também estou me qualificando em Marketing Digital com Inteligência Artificial e possuo conhecimentos de Informática Básica.</p>
+          </article>
+          <article class="panel reveal">
+            <h3>Informações profissionais</h3>
+            <ul class="fact-list">
+              <li><strong>Localização</strong>Santo André – SP</li>
+              <li><strong>Área atual</strong>Administrativo</li>
+              <li><strong>Cargo</strong>Auxiliar Administrativo</li>
+              <li><strong>Interesses</strong>Tecnologia e marketing digital</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competencias">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="section-kicker">02 / Competências</p>
+          <div><h2>Habilidades que levo para o trabalho.</h2><p class="section-intro">Conhecimentos e características profissionais apresentados de forma clara e objetiva.</p></div>
+        </div>
+        <div class="skills-layout">
+          <div class="skills-note reveal">
+            <p class="eyebrow">Meu foco</p>
+            <h3>Aprender sempre e aplicar novos conhecimentos.</h3>
+            <p>Tenho interesse em desenvolver habilidades digitais e ampliar minha contribuição no ambiente profissional.</p>
+          </div>
+          <div class="skill-list">
+            <div class="skill reveal"><span class="skill-mark"></span><span>Rotinas administrativas</span></div>
+            <div class="skill reveal"><span class="skill-mark"></span><span>Organização e responsabilidade</span></div>
+            <div class="skill reveal"><span class="skill-mark"></span><span>Informática básica</span></div>
+            <div class="skill reveal"><span class="skill-mark"></span><span>Marketing digital</span></div>
+            <div class="skill reveal"><span class="skill-mark"></span><span>Interesse em inteligência artificial</span></div>
+            <div class="skill reveal"><span class="skill-mark"></span><span>Aprendizado contínuo</span></div>
+            <div class="skill reveal"><span class="skill-mark"></span><span>Trabalho em equipe</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experiencia">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="section-kicker">03 / Experiência</p>
+          <div><h2>Atuação profissional</h2><p class="section-intro">Experiência informada no perfil profissional.</p></div>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-mark" aria-hidden="true"></div>
+          <article class="timeline-card">
+            <span class="meta">Experiência profissional</span>
+            <h3>Auxiliar Administrativo</h3>
+            <p><strong>9.Gplastic</strong></p>
+            <p>Atuação na área administrativa, contribuindo para a organização e o andamento das atividades da empresa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="formacao">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="section-kicker">04 / Formação e cursos</p>
+          <div><h2>Conhecimento em construção.</h2><p class="section-intro">Cursos e qualificações informados. Instituições e datas não foram incluídas porque não foram fornecidas.</p></div>
+        </div>
+        <div class="course-grid">
+          <article class="course-card featured reveal">
+            <span class="course-number">CURSO 01</span>
+            <div><h3>Marketing Digital com Inteligência Artificial</h3><p>Curso profissionalizante</p></div>
+          </article>
+          <article class="course-card reveal">
+            <span class="course-number">CURSO 02</span>
+            <div><h3>Informática Básica</h3><p>Conhecimentos básicos de informática</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="section-kicker">05 / Projetos</p>
+          <div><h2>Novas possibilidades pela frente.</h2><p class="section-intro">Esta seção pode ser atualizada quando você tiver projetos, trabalhos ou atividades de curso para apresentar.</p></div>
+        </div>
+        <div class="projects-empty reveal">
+          <div class="empty-icon" aria-hidden="true">+</div>
+          <div><h3>Projetos em desenvolvimento</h3><p>Nenhum projeto específico foi informado até o momento. Quando houver um projeto, você poderá adicionar aqui o objetivo, as ferramentas utilizadas e o resultado.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="section-kicker">06 / Contato</p>
+          <div><h2>Vamos manter contato.</h2><p class="section-intro">Este perfil apresenta minha experiência e meus interesses profissionais. Os dados de contato podem ser adicionados quando você quiser.</p></div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-box reveal">
+            <h3>Conecte-se comigo</h3>
+            <p>Para completar esta seção, inclua seu e-mail profissional ou o endereço do seu perfil no LinkedIn.</p>
+            <button class="btn" type="button" id="copyEmail">Copiar texto de apresentação</button>
+          </div>
+          <div class="contact-details reveal">
+            <div class="contact-item"><span>Localização</span><strong>Santo André – São Paulo, Brasil</strong></div>
+            <div class="contact-item"><span>Área profissional</span><strong>Auxiliar Administrativo</strong></div>
+            <div class="contact-item"><span>Interesses</span><strong>Marketing Digital · Inteligência Artificial</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Andreia Lima Viana</span>
+      <span>Perfil profissional · Santo André, SP</span>
+      <a class="back-top" href="#inicio">Voltar ao início ↑</a>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.textContent = isOpen ? 'Fechar' : 'Menu';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = 'Menu';
+    }));
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('visible'));
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toast = document.getElementById('toast');
+    document.getElementById('copyEmail').addEventListener('click', async () => {
+      const text = 'Olá! Sou Andreia Lima Viana, Auxiliar Administrativo em Santo André – SP. Tenho interesse em desenvolvimento profissional, Marketing Digital e Inteligência Artificial.';
+      try {
+        await navigator.clipboard.writeText(text);
+        toast.textContent = 'Texto de apresentação copiado!';
+      } catch (error) {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        const copied = document.execCommand('copy');
+        area.remove();
+        toast.textContent = copied ? 'Texto de apresentação copiado!' : text;
+      }
+      toast.classList.add('show');
+      window.setTimeout(() => toast.classList.remove('show'), 2800);
+    });
+
+    const sections = document.querySelectorAll('main section[id]');
+    const navItems = navLinks.querySelectorAll('a');
+    if ('IntersectionObserver' in window) {
+      const activeObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navItems.forEach(item => item.classList.toggle('active', item.getAttribute('href') === '#' + entry.target.id));
+          }
+        });
+      }, { rootMargin: '-25% 0px -65% 0px' });
+      sections.forEach(section => activeObserver.observe(section));
+    }
+  </script>
+</body>
+</html>
